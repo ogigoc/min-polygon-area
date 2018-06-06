@@ -1,0 +1,1 @@
+Calculate the order of given 2D points so that they form a simple polygon while minimizing area.
