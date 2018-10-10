@@ -133,10 +133,10 @@ function run() {
     if (resultToDraw)
       clearCanvas();
       drawPolygon(resultToDraw);
+      drawPoints(resultToDraw);
   }, 100);
 
   while(timesToRun--) {
-
     doTest(testNumber);
   }
 }

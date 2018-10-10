@@ -41,11 +41,14 @@ function drawPolygon(points) {
 function drawPoints(points) {
   points = scalePoints(points);
   const context = getCanvasContext();
-  context.fillStyle = "#ff2626";
+  context.fillStyle = "#000000";
   context.beginPath();
 
-  points.forEach(p => context.arc(p.x, p.y, 20, 0, Math.PI * 2, true));
+  points.forEach(p => {
+    context.moveTo(p.x, p.y);
+    context.arc(p.x, p.y, 4, 0, Math.PI * 2);
+  });
   
-  context.closePath();  
+  context.closePath();
   context.fill();
 }
